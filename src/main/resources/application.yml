@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/netflix
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  redis:
+    host: localhost
+    port: 6379
+
+
+tmdb:
+  auth:
+    api-key: ec26da8c9c229412f704d3dca05c1559
+    access-token: eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYzI2ZGE4YzljMjI5NDEyZjcwNGQzZGNhMDVjMTU1OSIsIm5iZiI6MTcyOTA5NjUwOC43MDEwNTgsInN1YiI6IjY3MGU3NDYyNDJlMTM5MWM1NjY3MTgzYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aTogfvfTgs4ydvjGLp4dpYDSfhirssHSGyE8LBEx2hs
+  api:
+    movie-lists:
+      now-playing: https://api.themoviedb.org/3/movie/now_playing
